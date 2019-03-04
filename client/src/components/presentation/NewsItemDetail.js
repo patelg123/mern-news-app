@@ -1,15 +1,11 @@
-import React, { Component} from 'react';
+import React from 'react';
 //import PropTypes from 'prop-types';
 
-class NewsItemDetail extends Component {
-    render(){
-        return (
+const NewsItemDetail = ()=>(
             <div>
                 <h2>News story title</h2>
                 <p>Body: test Mad Owl story text {this.props.id}</p>
             </div>
-        );
-    }
-}
+);
 
 export default NewsItemDetail;

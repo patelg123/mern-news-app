@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -8,9 +8,7 @@ import About from './components/layouts/About';
 import Layout from './components/layouts/Layout'
 import NewsItemDetail from './components/presentation/NewsItemDetail';
 
-class App extends Component {
-  render() {
-    return (
+const App = ()=>(
       <Provider store={store}>
         <BrowserRouter>
             <Layout>
@@ -20,8 +18,6 @@ class App extends Component {
             </Layout>
         </BrowserRouter>
       </Provider>
-    );
-  }
-}
+);
 
 export default App;
