@@ -6,7 +6,8 @@ import store from './stores/store';
 import Home from './components/layouts/Home';
 import About from './components/layouts/About';
 import Layout from './components/layouts/Layout'
-import NewsItemDetail from './components/presentation/NewsItemDetail';
+//import NewsItemDetail from './components/presentation/NewsItemDetail';
+import NewsArticle from './components/containers/NewsArticle';
 
 const App = ()=>(
       <Provider store={store}>
@@ -14,7 +15,7 @@ const App = ()=>(
             <Layout>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path='/news/:id' component={NewsItemDetail}/>
+                <Route path='/news/:id' component={NewsArticle}/>
             </Layout>
         </BrowserRouter>
       </Provider>
