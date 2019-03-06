@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 import { fetchNewsItem } from '../../actions/actions'
 
 class NewsArticle extends Component {
-
-
+    
     componentDidMount(){
 
         var fakeNewsItem = {
