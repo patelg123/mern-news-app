@@ -15,8 +15,12 @@ function newsItemReceived(newsItem){
 }
 
 export function fetchNews(fakeNews){
+    console.log('presend')
     return dispatch => {
-        dispatch(newsReceived(fakeNews));
+        return fetch(`/news`)
+        .then( (response) => response.json() )
+        .then( (data) => console.log(data))
+        .catch( (e) => console.log(e) );
     }
 }
 
