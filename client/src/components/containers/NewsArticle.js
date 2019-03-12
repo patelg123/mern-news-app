@@ -10,13 +10,13 @@ class NewsArticle extends Component {
     }
 
     render(){
-        let { newsItem } = this.props;
+        //let { newsItem } = this.props;
 
         return (
             <div>
                 <h2>News Story</h2>
                 <ul>
-                    { newsItem ? <NewsItemDetail data={newsItem} /> : null}
+                    { !this.props.newsItemLoading ? <NewsItemDetail data={this.props.newsItem} /> : <div>Loading</div>}
                 </ul>
             </div>
         )
@@ -25,7 +25,8 @@ class NewsArticle extends Component {
 
 const mapStateToProps = state => {
     return {
-        newsItem: state.news.newsItem
+        newsItem: state.news.newsItem,
+        newsItemLoading: state.news.newsItemLoading
     }
 }
 
